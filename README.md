@@ -9,7 +9,7 @@ A beautiful, lightweight, and fully responsive static HTML5/CSS3 template tailor
 
 ## 📸 Preview
 
-![Desktop and Mobile Mockup](https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1000&auto=format&fit=crop&q=60)
+![Desktop Mockup](assets/img/Example-page.png)
 *Modern layout with dynamic category filtering and mobile-friendly drawer navigation.*
 
 ---

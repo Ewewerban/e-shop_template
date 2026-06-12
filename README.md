@@ -4,6 +4,7 @@
 [![Platform: GitHub Pages](https://img.shields.io/badge/Hosting-GitHub%20Pages-blue.svg)](https://pages.github.com/)
 
 A beautiful, lightweight, and fully responsive static HTML5/CSS3 template tailored for rental businesses, party planners, entertainers, and event service providers. This template is fully optimized out-of-the-box for **GitHub Pages** hosting.
+[Demo](https://ewewerban.github.io/e-shop_template/)
 
 ---
 

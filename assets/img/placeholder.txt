@@ -1,5 +1,5 @@
 
-Hi! I'm a .placeholder!
+Hi! I'm a placeholder.txt !
 
 I'm the file that hold space in your assets/img directory so they don't disappear! 
 I'm important, but if you add other files here that don't cause you any clutter, you can delete me!

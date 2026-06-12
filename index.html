@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Company Name - Catalog</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon-16x16.png">
+</head>
+<body>
+
+    <header>
+        <h1>YOUR COMPANY NAME</h1>
+        <p>A short tagline or description of your business</p>
+    </header>
+
+    <button class="menu-toggle-btn" onclick="toggleMenu()">Show Categories ☰</button>
+
+    <div class="layout-wrapper container">
+        
+        <aside class="sidebar" id="sidebarMenu">
+            <h3>Categories</h3>
+            <ul class="category-list">
+                <li><button class="cat-btn active" onclick="filter('all', this)">✨ All Atractions</button></li>
+                <li><button class="cat-btn" onclick="filter('cat1', this)">🎈 Category 1</button></li>
+                <li><button class="cat-btn" onclick="filter('cat2', this)">🎨 Category 2</button></li>
+            </ul>
+        </aside>
+
+        <main class="catalog-main">
+            <section class="catalog-header">
+                <h2>Our Offer</h2>
+                <p>Select an item to view detailed parameters and pricing.</p>
+            </section>
+
+            <div class="product-grid" id="product-grid">
+                
+                <a href="cat1/product-1/" class="product-card" data-category="cat1">
+                    <div class="card-image">
+                        <img src="assets/img/placeholder.png" alt="Product 1 Name">
+                    </div>
+                    <div class="card-content">
+                        <h3>Product 1 Name</h3>
+                        <span class="card-price">from $100</span>
+                    </div>
+                </a>
+
+                <a href="cat2/product-2/" class="product-card" data-category="cat2">
+                    <div class="card-image">
+                        <img src="assets/img/placeholder.png" alt="Product 2 Name">
+                    </div>
+                    <div class="card-content">
+                        <h3>Product 2 Name</h3>
+                        <span class="card-price">from $200</span>
+                    </div>
+                </a>
+
+            </div>
+        </main>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Your Company Name. All rights reserved.</p>
+        <p>Contact: email@yourdomain.com | Phone: +00 000 000 000</p>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('sidebarMenu');
+            menu.classList.toggle('open');
+        }
+
+        function filter(category, button) {
+            const buttons = document.querySelectorAll('.cat-btn');
+            buttons.forEach(btn => btn.classList.remove('active'));
+            button.classList.add('active');
+
+            const cards = document.querySelectorAll('.product-card');
+            cards.forEach(card => {
+                const cardCat = card.getAttribute('data-category');
+                if (category === 'all' || cardCat === category) {
+                    card.style.display = "flex";
+                } else {
+                    card.style.display = "none";
+                }
+            });
+
+            if (window.innerWidth < 768) {
+                document.getElementById('sidebarMenu').classList.remove('open');
+            }
+        }
+    </script>
+
+</body>
+</html>
